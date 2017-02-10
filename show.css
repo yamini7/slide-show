@@ -1,0 +1,36 @@
+.hide-bullets {
+list-style:none;
+margin-left: 100px;
+margin-top:10px;
+}
+
+
+#myCarousel{
+
+margin-left: 10px;
+}
+.panel panel-default {
+	margin-top: 3px
+    
+
+}
+body{
+	background-color: #5c7c64
+
+}
+.btn1,.btn2,.btn3{
+	float: left;
+	margin:3px;
+}
+.btn4{
+	float: right;
+}
+#carousel-selector-0,#carousel-selector-1,#carousel-selector-2,#carousel-selector-3,#carousel-selector-4,#carousel-selector-5{
+	width: 150px;
+	
+	padding:0;
+}
+
+embed {
+	display: none;
+}

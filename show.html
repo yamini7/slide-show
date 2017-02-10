@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<title>slide show</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="show.css">
+
+<script src="jquery-3.1.1.js"> </script>
+</head>
+
+
+<body>
+<center>
+  <div class="panel panel-default">
+                                     <a class="btn1 btn-success btn-sm" onclick="window.print()" >
+                                        <span class="glyphicon glyphicon-print" ></span>                                       
+                                    </a>
+                                                                        
+                                    </a>
+                                    <a class="btn2 btn-success btn-sm">
+                                        <span class="glyphicon glyphicon-envelope"></span>                                       
+                                    </a>
+                                    <a   class="btn2 btn-success btn-sm"><span class="glyphicon glyphicon-volume-up"> </span></a>                                     
+                                    </a>
+                                    <a class="btn4 btn-success btn-sm">
+                                        <span class="glyphicon glyphicon-fullscreen"></span>                                       
+                                    </a>
+                                                              
+                                    </a>
+                                    <a class="btn btn-success btn-sm" href="#myCarousel"   data-slide="prev">
+                                        <span class="glyphicon glyphicon-backward"></span>                                       
+                                    </a>
+                                    
+
+                                    <a  class="btn btn-success btn-sm" href="#myCarousel"  data-slide="next">
+                                    <span class="glyphicon glyphicon-forward"></span>                                       
+                                    </a>  
+                                    </div>                              
+                                </div>
+                            </div>
+
+
+<div class="container">
+        <div class="row">
+                <div class="col-sm-12" id="carousel-bounding-box">
+                         <div class="carousel slide" id="myCarousel">
+                                    
+                                    <div class="carousel-inner">
+                                        <div class="active item" data-slide-number="1">
+                                        <img src="images/1.jpg"  >
+                                        <embed src="canon.mp3"></embed></div>
+
+                                        <div class="item" >
+                                        <img src="images/2.jpg" data-slide-number="2">
+                                        <embed src="canon.mp3"></embed></div>
+
+                                        <div class="item">
+                                        <img src="images/3.jpg" data-slide-number="3">
+                                        <embed src="canon.mp3"></embed></div>
+
+                                        <div class="item" >
+                                        <img src="images/4.jpg" data-slide-number="4">
+                                        <embed src="canon.mp3"></embed></div>
+
+                                        <div class="item">
+                                        <img src="images/5.jpg" data-slide-number="5">
+                                        <embed src="canon.mp3"></embed></div>
+
+                                        
+
+
+
+                            
+                <div class="row hidden-sm" id="slider-thumbs">
+                        
+                        <ul class="hide-bullets" >
+                            <li class="col-sm-2">
+                                <a class="thumbnail" id="carousel-selector-0"><img src="images/1.jpg" ></a>
+                            </li>
+
+                            <li class="col-sm-2">
+                                <a class="thumbnail" id="carousel-selector-1"><img src="images/2.jpg"></a>
+                            </li>
+
+                            <li class="col-sm-2">
+                                <a class="thumbnail" id="carousel-selector-2"><img src="images/3.jpg"></a>
+                            </li>
+
+                            <li class="col-sm-2">
+                                <a class="thumbnail" id="carousel-selector-3"><img src="images/4.jpg"></a>
+                            </li>
+
+                            <li class="col-sm-2">
+                                <a class="thumbnail" id="carousel-selector-4"><img src="images/5.jpg"></a>
+                            </li>
+
+                            
+                        </ul>                 
+                </div>
+        </div>
+</div>
+</center>
+
+
+
+<script>
+
+        $(document).ready(function() {
+ 
+        $('#myCarousel').carousel({
+                interval: 2000
+        });
+        
+ 
+        
+       $('[id^=carousel-selector-]').click( function(){
+            var id = this.id.substr(this.id.lastIndexOf("-") + 1);
+            var id = parseInt(id);
+            $('#myCarousel').carousel(id);
+        });
+ 
+ 
+        
+        $('#myCarousel').on('slid.bs.carousel', function (e) {
+                 var id = $('.item.active').data('slide-number');
+
+                 window.print();
+                
+            });
+            });   
+                
+        
+
+
+        
+</script>
+</body>
+</html>
